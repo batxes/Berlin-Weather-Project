@@ -1,0 +1,16 @@
+venv/
+.env
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+data/
+keys/
+.main.tf.swp
+.terraform.lock.hcl
+.terraform/
+.variables.tf.swp
+terraform.tfstate
+terraform.tfstate.backup
+
+
+
