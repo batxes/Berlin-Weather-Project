@@ -11,6 +11,10 @@ keys/
 .variables.tf.swp
 terraform.tfstate
 terraform.tfstate.backup
+variables.py
+logs/
+raw/
+airflow.cfg
 
 
 
