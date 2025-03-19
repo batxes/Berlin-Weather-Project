@@ -2,3 +2,5 @@ pandas
 scikit-learn
 flask
 gunicorn
+apache-airflow
+google.cloud

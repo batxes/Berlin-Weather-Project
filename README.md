@@ -1,19 +1,24 @@
 # Berlin-Weather-Project
 
+data: https://www.kaggle.com/datasets/mexwell/berlin-hourly-weather-data?select=berlin_soil_temperature.csv
+
+to download from Kaggle: https://www.youtube.com/watch?v=BlTvuNgTHR4&ab_channel=IndomitableTech
+
 
 ## Steps
 
-1. Create the repository:
-    - git init
-    - git remote add origin https://github.com/batxes/Berlin-Weather-Project.git
-    - git branch -M main
+1. Create the repository (Git):
+    - `git init`
+    - `git remote add origin https://github.com/batxes/Berlin-Weather-Project.git`
+    - `git branch -M main`
 
-2. Python virtual environment:
+2. Python virtual environment (Pipenv):
     - Create requirements.txt, add some libraries (we will update this on the go)
-    - pipenv install -r requirements.txt
-    - pipenv shell
+    - `pipenv install -r requirements.txt`
+    - `pipenv shell`
 
-3. Infrastructure as Code (IaC):
+3. Infrastructure as Code (IaC) (Terraform):
+    Here we will define and provision cloud resources. It is imporatnt for automation of infrastructure setup, reproducibility and scalability.
     - Install Terraform: https://developer.hashicorp.com/terraform/install?product_intent=terraform
     - Add google as provider and a GS bucket and Bigquery as resources
     - Add also a variables.tf so main.tf can be cleaner.
@@ -30,5 +35,26 @@
         - This happened because I created the bucket from the GCP web. With terraform, it could have been created directly. I will do this now for the bigquery dataset.
         - lets destroy what we have: terraform destroy. See that the bucket dissapears from the google cloud Platform.
         - adter adding the bigquery as resource, terraform plan, apply and check that it appears in GCP
-        - 
+        
+4. Data Ingestion and Orchestration (Airflow/Prefect): Now we want to create a workflow (direct acyclic graph (DAG)) to ingest data (APIs, databases), upload to a data lake (GCS, S3) and load the data into the warehouse (Bigquery, Redshift). It is important to automate data ingestion and loading, reliability and scalability.
+    - export AIRFLOW_HOME=~/work/Berlin-Weather-Project
+    - `pip install apache-airflow` -> add also to requirements
+    - `airflow db init`
+    - `airflow users create --username admin --firstname Ibai --lastname Irastorza --role Admin --email batxes@gmail.com`
+    -  add password (ninja)
+    - `airflow webserver --port 8080` -> if this fails: pip install --upgrade apache-airflow
+    - `airflow scheduler`
+    - Access the Airflow UI at http://localhost:8080
+    
+    4.1  Now that we have airflow up and running, lets create a DAG for Data Ingestion
+
+    - Create data_ingestion_dag.py in the dags/ directory
+    - add google.cloud to requirements.txt. Install it before with pip install google.cloud
+    - install and add also pip install --upgrade google-cloud-storage
+    - Get the KAggle API. Put the json in ~/.kaggle and then I create a variables.py file where I pasted the username and key
+    - add the variables.py to gitignore, we dont want our key there.
+    - pip install kaggle
+    - to check the name of the datasets: ╰─❯ kaggle datasets list -s berlin                                                                                
+    - 
+
 
