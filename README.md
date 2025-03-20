@@ -7,6 +7,8 @@ to download from Kaggle: https://www.youtube.com/watch?v=BlTvuNgTHR4&ab_channel=
 
 ## Steps
 
+TODOS: Containerize all
+
 1. Create the repository (Git):
     - `git init`
     - `git remote add origin https://github.com/batxes/Berlin-Weather-Project.git`
@@ -37,7 +39,7 @@ to download from Kaggle: https://www.youtube.com/watch?v=BlTvuNgTHR4&ab_channel=
         - adter adding the bigquery as resource, terraform plan, apply and check that it appears in GCP
         
 4. Data Ingestion and Orchestration (Airflow/Prefect): Now we want to create a workflow (direct acyclic graph (DAG)) to ingest data (APIs, databases), upload to a data lake (GCS, S3) and load the data into the warehouse (Bigquery, Redshift). It is important to automate data ingestion and loading, reliability and scalability.
-    - export AIRFLOW_HOME=~/work/Berlin-Weather-Project
+    - export AIRFLOW_HOME=~/work/Berlin-Weather-Project  NOTE: there has to be a way to add this which is not in the bashrc
     - `pip install apache-airflow` -> add also to requirements
     - `airflow db init`
     - `airflow users create --username admin --firstname Ibai --lastname Irastorza --role Admin --email batxes@gmail.com`
@@ -55,6 +57,11 @@ to download from Kaggle: https://www.youtube.com/watch?v=BlTvuNgTHR4&ab_channel=
     - add the variables.py to gitignore, we dont want our key there.
     - pip install kaggle
     - to check the name of the datasets: ╰─❯ kaggle datasets list -s berlin                                                                                
+    - Note: if the dag fails because of GCP credentials, this worked: export GOOGLE_APPLICATION_CREDENTIALS="/home/ibai/work/Berlin-Weather-Project/keys/berlin-weather-project-25fec91b5442.json"
+    - Note: Maybe we need to specify these exports beforehand
+    - Added 2 more dags, to create a table and to load into bigquery
+    - I need to install this also: pip install apache-airflow-providers-google  -> add to requirements.txt   
+    - I added the OS.environ GCS credentials to the beginning of the code, because each task needs them
     - 
-
+    
 
