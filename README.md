@@ -62,6 +62,8 @@ TODOS: Containerize all
     - Added 2 more dags, to create a table and to load into bigquery
     - I need to install this also: pip install apache-airflow-providers-google  -> add to requirements.txt   
     - I added the OS.environ GCS credentials to the beginning of the code, because each task needs them
-    - 
+
+
+    - Meanwhile, I thought of creating a docker-compose with airflow so I can run it and forget about all steps in point 4. I downloaded the docker compose code from the official website. I added some variables so it can read my environment variables. Added also kaggle to requirements.
     
 

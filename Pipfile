@@ -10,6 +10,8 @@ flask = "*"
 gunicorn = "*"
 apache-airflow = "*"
 "google.cloud" = "*"
+apache-airflow-providers-google = "*"
+kaggle = "*"
 
 [dev-packages]
 
