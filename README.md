@@ -65,5 +65,20 @@ TODOS: Containerize all
 
 
     - Meanwhile, I thought of creating a docker-compose with airflow so I can run it and forget about all steps in point 4. I downloaded the docker compose code from the official website. I added some variables so it can read my environment variables. Added also kaggle to requirements.
+
+5. Data transformation (dbt)
+    - First install dbt-bigquery
+    - set up a dbt project: 
+        - create a directory: mkdir dbt_project -> cd dbt_project
+        - initialize: dbt init (I called the project berlin_weather)
+    - configure profiles.yml file to connect to BigQuery
+    - create a transformation model: example_model.sql
+    - cd berlin_weather -> dbt run
+
+    At this point, we should have in ~/.dbt/profiles.yml and also inside dbt_project the dbt project with the dbt_project yml and the exampple.sql in models. wITH RUN, we get a view in bigquery.
+
+6. Data Visualization Dashboard (google data studio / looker studio)
+    - create a new report
+    - connect to BigQuery dataset
     
 

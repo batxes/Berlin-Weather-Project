@@ -12,6 +12,7 @@ apache-airflow = "*"
 "google.cloud" = "*"
 apache-airflow-providers-google = "*"
 kaggle = "*"
+dbt-bigquery = "*"
 
 [dev-packages]
 

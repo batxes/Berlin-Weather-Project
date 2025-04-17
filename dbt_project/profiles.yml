@@ -1,0 +1,13 @@
+config:
+  send_anonymous_usage_stats: false
+
+berlin_weather_project:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: berlin-weather-project
+      dataset: berlin_weather_dataset
+      threads: 4
+      keyfile: /home/ibai/work/Berlin-Weather-Project/keys/berlin-weather-project-25fec91b5442.json
