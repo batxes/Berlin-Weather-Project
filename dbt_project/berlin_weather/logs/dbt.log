@@ -1,0 +1,455 @@
+[0m23:49:09.514611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b75559ae70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b757212e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b754f12930>]}
+
+
+============================== 23:49:09.517957 | 4dd4981c-6152-47c4-ac22-a73c71847d23 ==============================
+[0m23:49:09.517957 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:49:09.518449 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ibai/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:49:10.395965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b7548f9b80>]}
+[0m23:49:10.478322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b720e9fd40>]}
+[0m23:49:10.479784 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:49:10.625075 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:49:10.625875 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m23:49:10.626318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b720c490d0>]}
+[0m23:49:11.824678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b720c4aa20>]}
+[0m23:49:11.888234 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m23:49:11.890000 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m23:49:11.900790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b720daba40>]}
+[0m23:49:11.901255 [info ] [MainThread]: Found 2 models, 4 data tests, 491 macros
+[0m23:49:11.901583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b720c7c440>]}
+[0m23:49:11.902920 [info ] [MainThread]: 
+[0m23:49:11.903305 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:49:11.903641 [info ] [MainThread]: 
+[0m23:49:11.904121 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:49:11.908756 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_berlin-weather-project'
+[0m23:49:11.909454 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:49:12.243563 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_berlin-weather-project, now list_berlin-weather-project_berlin_weather_dataset)
+[0m23:49:12.244281 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:49:12.562582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b7201f70e0>]}
+[0m23:49:12.563430 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:49:12.602894 [debug] [Thread-1 (]: Began running node model.berlin_weather.my_first_dbt_model
+[0m23:49:12.603498 [info ] [Thread-1 (]: 1 of 2 START sql table model berlin_weather_dataset.my_first_dbt_model ......... [RUN]
+[0m23:49:12.604166 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_berlin-weather-project_berlin_weather_dataset, now model.berlin_weather.my_first_dbt_model)
+[0m23:49:12.604698 [debug] [Thread-1 (]: Began compiling node model.berlin_weather.my_first_dbt_model
+[0m23:49:12.614278 [debug] [Thread-1 (]: Writing injected SQL for node "model.berlin_weather.my_first_dbt_model"
+[0m23:49:12.615204 [debug] [Thread-1 (]: Began executing node model.berlin_weather.my_first_dbt_model
+[0m23:49:12.651521 [debug] [Thread-1 (]: Writing runtime sql for node "model.berlin_weather.my_first_dbt_model"
+[0m23:49:12.652376 [debug] [Thread-1 (]: On model.berlin_weather.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "berlin_weather", "target_name": "dev", "node_id": "model.berlin_weather.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `berlin-weather-project`.`berlin_weather_dataset`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m23:49:12.652769 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:49:13.256893 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=berlin-weather-project&j=bq:EU:e84627a6-74fe-4a50-a702-f1a45ca95f2d&page=queryresults
+[0m23:49:15.738835 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b720ecc170>]}
+[0m23:49:15.739723 [info ] [Thread-1 (]: 1 of 2 OK created sql table model berlin_weather_dataset.my_first_dbt_model .... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 3.13s]
+[0m23:49:15.740508 [debug] [Thread-1 (]: Finished running node model.berlin_weather.my_first_dbt_model
+[0m23:49:15.741715 [debug] [Thread-1 (]: Began running node model.berlin_weather.my_second_dbt_model
+[0m23:49:15.742347 [info ] [Thread-1 (]: 2 of 2 START sql view model berlin_weather_dataset.my_second_dbt_model ......... [RUN]
+[0m23:49:15.742935 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.berlin_weather.my_first_dbt_model, now model.berlin_weather.my_second_dbt_model)
+[0m23:49:15.743431 [debug] [Thread-1 (]: Began compiling node model.berlin_weather.my_second_dbt_model
+[0m23:49:15.746981 [debug] [Thread-1 (]: Writing injected SQL for node "model.berlin_weather.my_second_dbt_model"
+[0m23:49:15.747772 [debug] [Thread-1 (]: Began executing node model.berlin_weather.my_second_dbt_model
+[0m23:49:15.776978 [debug] [Thread-1 (]: Writing runtime sql for node "model.berlin_weather.my_second_dbt_model"
+[0m23:49:15.777757 [debug] [Thread-1 (]: On model.berlin_weather.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "berlin_weather", "target_name": "dev", "node_id": "model.berlin_weather.my_second_dbt_model"} */
+
+
+  create or replace view `berlin-weather-project`.`berlin_weather_dataset`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `berlin-weather-project`.`berlin_weather_dataset`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m23:49:15.778258 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:49:16.426210 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=berlin-weather-project&j=bq:EU:8bb5e8a0-f602-46d4-b5da-608257ea8e9c&page=queryresults
+[0m23:49:16.674945 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4dd4981c-6152-47c4-ac22-a73c71847d23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b71b7c7b60>]}
+[0m23:49:16.676005 [info ] [Thread-1 (]: 2 of 2 OK created sql view model berlin_weather_dataset.my_second_dbt_model .... [[32mCREATE VIEW (0 processed)[0m in 0.93s]
+[0m23:49:16.676957 [debug] [Thread-1 (]: Finished running node model.berlin_weather.my_second_dbt_model
+[0m23:49:16.678666 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:49:16.728455 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:49:16.729005 [debug] [MainThread]: Connection 'model.berlin_weather.my_second_dbt_model' was properly closed.
+[0m23:49:16.729361 [info ] [MainThread]: 
+[0m23:49:16.729737 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.83 seconds (4.83s).
+[0m23:49:16.730532 [debug] [MainThread]: Command end result
+[0m23:49:16.752017 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m23:49:16.754137 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m23:49:16.759564 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/run_results.json
+[0m23:49:16.760081 [info ] [MainThread]: 
+[0m23:49:16.760533 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:49:16.760849 [info ] [MainThread]: 
+[0m23:49:16.761190 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m23:49:16.762309 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.296518, "process_in_blocks": "24", "process_kernel_time": 1.087272, "process_mem_max_rss": "235832", "process_out_blocks": "3080", "process_user_time": 4.032135}
+[0m23:49:16.762736 [debug] [MainThread]: Command `dbt run` succeeded at 23:49:16.762655 after 7.30 seconds
+[0m23:49:16.763086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b7548b8470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b720a98230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77b7556fdeb0>]}
+[0m23:49:16.763427 [debug] [MainThread]: Flushing usage events
+[0m23:49:17.260285 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:54:47.942801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714aa16e3ce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714aa16e2840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714aa16e3b00>]}
+
+
+============================== 23:54:47.946527 | 87ad6fad-d244-4a7a-8c27-d660d95e389b ==============================
+[0m23:54:47.946527 [info ] [MainThread]: Running with dbt=1.9.4
+[0m23:54:47.947255 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/ibai/.dbt', 'log_path': '/home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:54:48.813011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '87ad6fad-d244-4a7a-8c27-d660d95e389b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714a6d4d36b0>]}
+[0m23:54:48.867065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '87ad6fad-d244-4a7a-8c27-d660d95e389b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714a6d75c9b0>]}
+[0m23:54:48.867715 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m23:54:49.018391 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m23:54:49.114079 [debug] [MainThread]: Partial parsing enabled: 2 files deleted, 1 files added, 0 files changed.
+[0m23:54:49.114833 [debug] [MainThread]: Partial parsing: added file: berlin_weather://models/example/example.sql
+[0m23:54:49.115258 [debug] [MainThread]: Partial parsing: deleted file: berlin_weather://models/example/my_second_dbt_model.sql
+[0m23:54:49.115658 [debug] [MainThread]: Partial parsing: deleted file: berlin_weather://models/example/my_first_dbt_model.sql
+[0m23:54:49.458278 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models/example/schema.yml'
+[0m23:54:49.459536 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models/example/schema.yml'
+[0m23:54:49.535734 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.berlin_weather.unique_my_second_dbt_model_id.57a0f8c493' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m23:54:49.536319 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.berlin_weather.not_null_my_second_dbt_model_id.151b76d778' (models/example/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m23:54:49.536724 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.berlin_weather.unique_my_first_dbt_model_id.16e066b321' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m23:54:49.537096 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.berlin_weather.not_null_my_first_dbt_model_id.5fb22c2710' (models/example/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m23:54:49.585722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '87ad6fad-d244-4a7a-8c27-d660d95e389b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714a6cfaa0c0>]}
+[0m23:54:49.681553 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m23:54:49.685899 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m23:54:49.698122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '87ad6fad-d244-4a7a-8c27-d660d95e389b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714a6cf89c70>]}
+[0m23:54:49.698647 [info ] [MainThread]: Found 1 model, 491 macros
+[0m23:54:49.698977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87ad6fad-d244-4a7a-8c27-d660d95e389b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714a6cfffdd0>]}
+[0m23:54:49.700203 [info ] [MainThread]: 
+[0m23:54:49.700546 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:54:49.700840 [info ] [MainThread]: 
+[0m23:54:49.701283 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:54:49.702353 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_berlin-weather-project'
+[0m23:54:49.703041 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:54:50.048204 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_berlin-weather-project, now list_berlin-weather-project_berlin_weather_dataset)
+[0m23:54:50.049086 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:54:50.408960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87ad6fad-d244-4a7a-8c27-d660d95e389b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714a6d2e19d0>]}
+[0m23:54:50.409747 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:54:50.454423 [debug] [Thread-1 (]: Began running node model.berlin_weather.example
+[0m23:54:50.455473 [info ] [Thread-1 (]: 1 of 1 START sql view model berlin_weather_dataset.example ..................... [RUN]
+[0m23:54:50.456266 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_berlin-weather-project_berlin_weather_dataset, now model.berlin_weather.example)
+[0m23:54:50.456899 [debug] [Thread-1 (]: Began compiling node model.berlin_weather.example
+[0m23:54:50.466462 [debug] [Thread-1 (]: Writing injected SQL for node "model.berlin_weather.example"
+[0m23:54:50.467570 [debug] [Thread-1 (]: Began executing node model.berlin_weather.example
+[0m23:54:50.511418 [debug] [Thread-1 (]: Writing runtime sql for node "model.berlin_weather.example"
+[0m23:54:50.512241 [debug] [Thread-1 (]: On model.berlin_weather.example: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "berlin_weather", "target_name": "dev", "node_id": "model.berlin_weather.example"} */
+
+
+  create or replace view `berlin-weather-project`.`berlin_weather_dataset`.`example`
+  OPTIONS()
+  as 
+
+SELECT
+  V_TE002,
+  V_TE005,
+  V_TE010,
+  V_TE020,
+  V_TE050,
+  V_TE100,
+  -- Add your transformation logic here
+  (V_TE002 + V_TE005) / 2 AS average_te002_te005
+FROM
+  `berlin-weather-project.berlin_weather_dataset.berlin_soil_temperature`;
+
+
+[0m23:54:50.512659 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:54:51.128676 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=berlin-weather-project&j=bq:EU:de681d84-b3d9-46e2-be34-73465f6fc1de&page=queryresults
+[0m23:54:51.412751 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87ad6fad-d244-4a7a-8c27-d660d95e389b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714aa1e00680>]}
+[0m23:54:51.413526 [info ] [Thread-1 (]: 1 of 1 OK created sql view model berlin_weather_dataset.example ................ [[32mCREATE VIEW (0 processed)[0m in 0.96s]
+[0m23:54:51.414157 [debug] [Thread-1 (]: Finished running node model.berlin_weather.example
+[0m23:54:51.416876 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:54:51.466945 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:54:51.467374 [debug] [MainThread]: Connection 'model.berlin_weather.example' was properly closed.
+[0m23:54:51.467704 [info ] [MainThread]: 
+[0m23:54:51.468024 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.77 seconds (1.77s).
+[0m23:54:51.468623 [debug] [MainThread]: Command end result
+[0m23:54:51.488012 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m23:54:51.490949 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m23:54:51.496209 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/run_results.json
+[0m23:54:51.496608 [info ] [MainThread]: 
+[0m23:54:51.496966 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:54:51.497254 [info ] [MainThread]: 
+[0m23:54:51.497576 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m23:54:51.498515 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.604501, "process_in_blocks": "0", "process_kernel_time": 1.116437, "process_mem_max_rss": "234336", "process_out_blocks": "3040", "process_user_time": 3.30317}
+[0m23:54:51.498954 [debug] [MainThread]: Command `dbt run` succeeded at 23:54:51.498868 after 3.61 seconds
+[0m23:54:51.499320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714aa1ac1040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714a6cf13860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714aa2b25df0>]}
+[0m23:54:51.499681 [debug] [MainThread]: Flushing usage events
+[0m23:54:52.402008 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:01:53.433075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x718304f214c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x718304bb11c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7183060979e0>]}
+
+
+============================== 00:01:53.435919 | 4add9c13-4140-4e7c-9fd4-f0412e70a4a5 ==============================
+[0m00:01:53.435919 [info ] [MainThread]: Running with dbt=1.9.4
+[0m00:01:53.436411 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ibai/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m00:01:54.331960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4add9c13-4140-4e7c-9fd4-f0412e70a4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7182d0bc5940>]}
+[0m00:01:54.385621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4add9c13-4140-4e7c-9fd4-f0412e70a4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7182d0482a20>]}
+[0m00:01:54.386687 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m00:01:54.535371 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m00:01:54.630258 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:01:54.630779 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:01:54.664162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4add9c13-4140-4e7c-9fd4-f0412e70a4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7182d0342390>]}
+[0m00:01:54.851582 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m00:01:54.853934 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m00:01:54.865866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4add9c13-4140-4e7c-9fd4-f0412e70a4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7182d009d190>]}
+[0m00:01:54.866525 [info ] [MainThread]: Found 1 model, 491 macros
+[0m00:01:54.867019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4add9c13-4140-4e7c-9fd4-f0412e70a4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7182d038d370>]}
+[0m00:01:54.869123 [info ] [MainThread]: 
+[0m00:01:54.869644 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:01:54.869956 [info ] [MainThread]: 
+[0m00:01:54.870424 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:01:54.871423 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_berlin-weather-project'
+[0m00:01:54.871983 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:01:55.327936 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_berlin-weather-project, now list_berlin-weather-project_berlin_weather_dataset)
+[0m00:01:55.329219 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:01:55.709343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4add9c13-4140-4e7c-9fd4-f0412e70a4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x718304dc2ea0>]}
+[0m00:01:55.710238 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:01:55.762224 [debug] [Thread-1 (]: Began running node model.berlin_weather.example
+[0m00:01:55.763888 [info ] [Thread-1 (]: 1 of 1 START sql view model berlin_weather_dataset.example ..................... [RUN]
+[0m00:01:55.764725 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_berlin-weather-project_berlin_weather_dataset, now model.berlin_weather.example)
+[0m00:01:55.765439 [debug] [Thread-1 (]: Began compiling node model.berlin_weather.example
+[0m00:01:55.774601 [debug] [Thread-1 (]: Writing injected SQL for node "model.berlin_weather.example"
+[0m00:01:55.775266 [debug] [Thread-1 (]: Began executing node model.berlin_weather.example
+[0m00:01:55.807013 [debug] [Thread-1 (]: Writing runtime sql for node "model.berlin_weather.example"
+[0m00:01:55.807807 [debug] [Thread-1 (]: On model.berlin_weather.example: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "berlin_weather", "target_name": "dev", "node_id": "model.berlin_weather.example"} */
+
+
+  create or replace view `berlin-weather-project`.`berlin_weather_dataset`.`example`
+  OPTIONS()
+  as 
+
+SELECT
+  V_TE002,
+  V_TE005,
+  V_TE010,
+  V_TE020,
+  V_TE050,
+  V_TE100,
+  -- Add your transformation logic here
+  (V_TE002 + V_TE005) / 2 AS average_te002_te005
+FROM
+  `berlin-weather-project.berlin_weather_dataset.berlin_soil_temperature`;
+
+
+[0m00:01:55.808192 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:01:56.547980 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=berlin-weather-project&j=bq:EU:13ed5562-feca-4f1f-802e-1c58bf4b7291&page=queryresults
+[0m00:01:56.862171 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4add9c13-4140-4e7c-9fd4-f0412e70a4a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7182d05c4140>]}
+[0m00:01:56.863414 [info ] [Thread-1 (]: 1 of 1 OK created sql view model berlin_weather_dataset.example ................ [[32mCREATE VIEW (0 processed)[0m in 1.10s]
+[0m00:01:56.864102 [debug] [Thread-1 (]: Finished running node model.berlin_weather.example
+[0m00:01:56.865527 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:01:56.912291 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:01:56.912901 [debug] [MainThread]: Connection 'model.berlin_weather.example' was properly closed.
+[0m00:01:56.913386 [info ] [MainThread]: 
+[0m00:01:56.913883 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.04 seconds (2.04s).
+[0m00:01:56.914763 [debug] [MainThread]: Command end result
+[0m00:01:56.935840 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m00:01:56.937355 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m00:01:56.942105 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/run_results.json
+[0m00:01:56.942453 [info ] [MainThread]: 
+[0m00:01:56.942836 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:01:56.943136 [info ] [MainThread]: 
+[0m00:01:56.943455 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m00:01:56.944317 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.560635, "process_in_blocks": "0", "process_kernel_time": 1.1852, "process_mem_max_rss": "230092", "process_out_blocks": "2024", "process_user_time": 3.020607}
+[0m00:01:56.944781 [debug] [MainThread]: Command `dbt run` succeeded at 00:01:56.944689 after 3.56 seconds
+[0m00:01:56.945141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x718303fb8410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x718303fb8440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7182d05c4140>]}
+[0m00:01:56.945495 [debug] [MainThread]: Flushing usage events
+[0m00:01:57.571336 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:49:53.847697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61d60bfda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61d5dbc470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61d8340770>]}
+
+
+============================== 20:49:53.851694 | 0093c5b2-db8a-476e-a897-0e1be36679b6 ==============================
+[0m20:49:53.851694 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:49:53.852174 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ibai/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:49:55.546656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0093c5b2-db8a-476e-a897-0e1be36679b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61a24a9d90>]}
+[0m20:49:55.589248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0093c5b2-db8a-476e-a897-0e1be36679b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61d7cb0c20>]}
+[0m20:49:55.589782 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m20:49:55.725749 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m20:49:55.836280 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:49:55.836827 [debug] [MainThread]: Partial parsing: updated file: berlin_weather://models/example/example.sql
+[0m20:49:56.093566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0093c5b2-db8a-476e-a897-0e1be36679b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61d598e0c0>]}
+[0m20:49:56.142681 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m20:49:56.151825 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m20:49:56.204764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0093c5b2-db8a-476e-a897-0e1be36679b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61a194fa10>]}
+[0m20:49:56.205165 [info ] [MainThread]: Found 1 model, 491 macros
+[0m20:49:56.205465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0093c5b2-db8a-476e-a897-0e1be36679b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61a1d679e0>]}
+[0m20:49:56.206562 [info ] [MainThread]: 
+[0m20:49:56.206885 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:49:56.207157 [info ] [MainThread]: 
+[0m20:49:56.207558 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:49:56.208444 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_berlin-weather-project'
+[0m20:49:56.209169 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:49:56.687566 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_berlin-weather-project, now list_berlin-weather-project_berlin_weather_dataset)
+[0m20:49:56.688331 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:49:57.096222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0093c5b2-db8a-476e-a897-0e1be36679b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61a1ad9df0>]}
+[0m20:49:57.096693 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:49:57.146368 [debug] [Thread-1 (]: Began running node model.berlin_weather.example
+[0m20:49:57.147185 [info ] [Thread-1 (]: 1 of 1 START sql view model berlin_weather_dataset.example ..................... [RUN]
+[0m20:49:57.147805 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_berlin-weather-project_berlin_weather_dataset, now model.berlin_weather.example)
+[0m20:49:57.148340 [debug] [Thread-1 (]: Began compiling node model.berlin_weather.example
+[0m20:49:57.155229 [debug] [Thread-1 (]: Writing injected SQL for node "model.berlin_weather.example"
+[0m20:49:57.155817 [debug] [Thread-1 (]: Began executing node model.berlin_weather.example
+[0m20:49:57.179213 [debug] [Thread-1 (]: Writing runtime sql for node "model.berlin_weather.example"
+[0m20:49:57.179757 [debug] [Thread-1 (]: On model.berlin_weather.example: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "berlin_weather", "target_name": "dev", "node_id": "model.berlin_weather.example"} */
+
+
+  create or replace view `berlin-weather-project`.`berlin_weather_dataset`.`example`
+  OPTIONS()
+  as 
+
+SELECT
+  V_TE002,
+  V_TE005,
+  V_TE010,
+  V_TE020,
+  V_TE050,
+  V_TE100,
+  -- Add your transformation logic here
+  CAST(MESS_DATUM AS DATETIME) AS datetime_mess_datum,
+  (V_TE002 + V_TE005) / 2 AS average_te002_te005
+FROM
+  `berlin-weather-project.berlin_weather_dataset.berlin_soil_temperature`;
+
+
+[0m20:49:57.180124 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:49:57.893313 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=berlin-weather-project&j=bq:EU:553d88ea-b9f6-4e47-88ff-6047f5d6133f&page=queryresults
+[0m20:49:58.404066 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0093c5b2-db8a-476e-a897-0e1be36679b6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61a1f90380>]}
+[0m20:49:58.404654 [info ] [Thread-1 (]: 1 of 1 OK created sql view model berlin_weather_dataset.example ................ [[32mCREATE VIEW (0 processed)[0m in 1.26s]
+[0m20:49:58.405164 [debug] [Thread-1 (]: Finished running node model.berlin_weather.example
+[0m20:49:58.406316 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:49:58.442038 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:49:58.442336 [debug] [MainThread]: Connection 'model.berlin_weather.example' was properly closed.
+[0m20:49:58.442640 [info ] [MainThread]: 
+[0m20:49:58.442957 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.24 seconds (2.24s).
+[0m20:49:58.443522 [debug] [MainThread]: Command end result
+[0m20:49:58.458886 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m20:49:58.460054 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m20:49:58.464161 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/run_results.json
+[0m20:49:58.464457 [info ] [MainThread]: 
+[0m20:49:58.464838 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:49:58.465124 [info ] [MainThread]: 
+[0m20:49:58.465430 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:49:58.466246 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.6577425, "process_in_blocks": "260576", "process_kernel_time": 1.250167, "process_mem_max_rss": "231156", "process_out_blocks": "3032", "process_user_time": 2.540308}
+[0m20:49:58.466618 [debug] [MainThread]: Command `dbt run` succeeded at 20:49:58.466541 after 4.66 seconds
+[0m20:49:58.466940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61d5dbc470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61a1cb6c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61d67b49e0>]}
+[0m20:49:58.467284 [debug] [MainThread]: Flushing usage events
+[0m20:49:59.070040 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:57:00.323522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb579506180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb578fe4dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb5791855e0>]}
+
+
+============================== 20:57:00.327732 | b536a4df-5589-4216-9ae2-6833d436b12f ==============================
+[0m20:57:00.327732 [info ] [MainThread]: Running with dbt=1.9.4
+[0m20:57:00.328250 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/logs', 'profiles_dir': '/home/ibai/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:57:01.242612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b536a4df-5589-4216-9ae2-6833d436b12f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb545325460>]}
+[0m20:57:01.296955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b536a4df-5589-4216-9ae2-6833d436b12f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb5454c82f0>]}
+[0m20:57:01.297739 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m20:57:01.454551 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m20:57:01.545509 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m20:57:01.546545 [debug] [MainThread]: Partial parsing: updated file: berlin_weather://models/example/example.sql
+[0m20:57:01.869530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b536a4df-5589-4216-9ae2-6833d436b12f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb5789b0500>]}
+[0m20:57:01.967627 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m20:57:01.969250 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m20:57:01.978659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b536a4df-5589-4216-9ae2-6833d436b12f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb544b2d520>]}
+[0m20:57:01.979196 [info ] [MainThread]: Found 1 model, 491 macros
+[0m20:57:01.979553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b536a4df-5589-4216-9ae2-6833d436b12f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb544bc53a0>]}
+[0m20:57:01.981871 [info ] [MainThread]: 
+[0m20:57:01.982748 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:57:01.983284 [info ] [MainThread]: 
+[0m20:57:01.984201 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:57:01.986126 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_berlin-weather-project'
+[0m20:57:01.986960 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:02.339249 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_berlin-weather-project, now list_berlin-weather-project_berlin_weather_dataset)
+[0m20:57:02.340000 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:57:02.697865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b536a4df-5589-4216-9ae2-6833d436b12f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb5789b1f70>]}
+[0m20:57:02.698374 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:57:02.739867 [debug] [Thread-1 (]: Began running node model.berlin_weather.example
+[0m20:57:02.740508 [info ] [Thread-1 (]: 1 of 1 START sql view model berlin_weather_dataset.example ..................... [RUN]
+[0m20:57:02.740984 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_berlin-weather-project_berlin_weather_dataset, now model.berlin_weather.example)
+[0m20:57:02.741397 [debug] [Thread-1 (]: Began compiling node model.berlin_weather.example
+[0m20:57:02.749787 [debug] [Thread-1 (]: Writing injected SQL for node "model.berlin_weather.example"
+[0m20:57:02.751290 [debug] [Thread-1 (]: Began executing node model.berlin_weather.example
+[0m20:57:02.780538 [debug] [Thread-1 (]: Writing runtime sql for node "model.berlin_weather.example"
+[0m20:57:02.781756 [debug] [Thread-1 (]: On model.berlin_weather.example: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "berlin_weather", "target_name": "dev", "node_id": "model.berlin_weather.example"} */
+
+
+  create or replace view `berlin-weather-project`.`berlin_weather_dataset`.`example`
+  OPTIONS()
+  as -- models/stg_soil_temperature.sql
+
+with raw_data as (
+
+  select
+    STATIONS_ID,
+    MESS_DATUM,
+    QN_2,
+    V_TE002,
+    V_TE005,
+    V_TE010,
+    V_TE020,
+    V_TE050,
+    V_TE100,
+    eor,
+
+    -- Convert MESS_DATUM (e.g., 2023120905) to TIMESTAMP
+    parse_timestamp('%Y%m%d%H', cast(MESS_DATUM as string)) as mess_datum_ts
+
+  from `berlin-weather-project.berlin_weather_dataset.berlin_soil_temperature`
+
+)
+
+select *
+from raw_data;
+
+
+[0m20:57:02.782320 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:57:03.520282 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=berlin-weather-project&j=bq:EU:6abcf51c-efb2-4623-b58e-60b8fe66f130&page=queryresults
+[0m20:57:03.810475 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b536a4df-5589-4216-9ae2-6833d436b12f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb544fb0500>]}
+[0m20:57:03.811157 [info ] [Thread-1 (]: 1 of 1 OK created sql view model berlin_weather_dataset.example ................ [[32mCREATE VIEW (0 processed)[0m in 1.07s]
+[0m20:57:03.811792 [debug] [Thread-1 (]: Finished running node model.berlin_weather.example
+[0m20:57:03.816316 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:57:03.865366 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:57:03.865789 [debug] [MainThread]: Connection 'model.berlin_weather.example' was properly closed.
+[0m20:57:03.866117 [info ] [MainThread]: 
+[0m20:57:03.866436 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.88 seconds (1.88s).
+[0m20:57:03.867038 [debug] [MainThread]: Command end result
+[0m20:57:03.886120 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/manifest.json
+[0m20:57:03.888782 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/semantic_manifest.json
+[0m20:57:03.895772 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ibai/work/Berlin-Weather-Project/dbt_project/berlin_weather/target/run_results.json
+[0m20:57:03.896182 [info ] [MainThread]: 
+[0m20:57:03.896543 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:57:03.896841 [info ] [MainThread]: 
+[0m20:57:03.897160 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:57:03.897990 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.6270487, "process_in_blocks": "0", "process_kernel_time": 1.069315, "process_mem_max_rss": "232656", "process_out_blocks": "3024", "process_user_time": 3.183895}
+[0m20:57:03.898364 [debug] [MainThread]: Command `dbt run` succeeded at 20:57:03.898295 after 3.63 seconds
+[0m20:57:03.898699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb578e16e40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb544e16e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb5797c2060>]}
+[0m20:57:03.899043 [debug] [MainThread]: Flushing usage events
+[0m20:57:04.621895 [debug] [MainThread]: An error was encountered while trying to flush usage events

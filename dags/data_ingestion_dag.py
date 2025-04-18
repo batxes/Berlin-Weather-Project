@@ -10,6 +10,7 @@ import sys
 # add previous directory where variables.py is
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import variables
+import kaggle
 
 # do it here so all tasks use it
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = variables.gcp_credentials
@@ -29,7 +30,6 @@ with DAG(
         os.environ["KAGGLE_KEY"] = variables.kaggle_key
 
         # import kaggle itself seems to be executing an authentication step and fails if kaggle credentials not found
-        import kaggle
         kaggle.api.authenticate()
         kaggle.api.dataset_download_files(variables.kaggle_dataset, path=variables.kaggle_dataset_path, unzip=True)
         print ("Kaggle authentication successful")

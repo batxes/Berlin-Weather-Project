@@ -1,13 +1,98 @@
-# Berlin-Weather-Project
+# 🌦️ Berlin Weather Data Engineering Pipeline
 
-data: https://www.kaggle.com/datasets/mexwell/berlin-hourly-weather-data?select=berlin_soil_temperature.csv
+**An end-to-end data engineering pipeline** collecting, processing, and analyzing Berlin's hourly weather data.
 
-to download from Kaggle: https://www.youtube.com/watch?v=BlTvuNgTHR4&ab_channel=IndomitableTech
+![Pipeline](https://img.shields.io/badge/Pipeline-Airflow%20%7C%20dbt%20%7C%20BigQuery-blue)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-Terraform%20%7C%20GCP-orange)
+![Visualization](https://img.shields.io/badge/Visualization-Metabase%20%7C%20Looker%20Studio-green)
+
+## 📌 Project Overview
+This project automates:
+1. Data ingestion from Kaggle
+2. Cloud storage (GCS)
+3. Data warehousing (BigQuery)
+4. Transformation (dbt)
+5. Visualization (Metabase)
+
+## 🛠️ Tech Stack
+| Component        | Technology           |
+|------------------|----------------------|
+| Infrastructure   | Terraform (GCP)      |
+| Orchestration    | Apache Airflow       |
+| Storage          | Google Cloud Storage |
+| Data Warehouse   | BigQuery             |
+| Transformation   | dbt                  |
+| Visualization    | Metabase             |
+| Containerization | Docker               |
+
+## 📂 Data Source
+[Berlin Hourly Weather Data](https://www.kaggle.com/datasets/mexwell/berlin-hourly-weather-data) from Kaggle
+
+## 🚀 Quick Start
+
+### 1. Infrastructure Setup
+```bash
+terraform init
+terraform apply  # Creates GCS bucket and BigQuery dataset
+```
+
+### 2. Run Airflow
+```bash
+docker-compose up
+```
+Access Airflow UI at: http://localhost:8080
+
+### 3. Data Transformation
+```bash
+cd dbt_project
+dbt run
+```
+
+### 4. Visualization
+```bash
+docker run -d -p 3000:3000 --name metabase metabase/metabase
+```
+
+Access Metabase at: http://localhost:3000
+
+## Example images
+
+![GCPbuquet](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/google_bucket.png)
+![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/google_bigquery1.png)
+![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/google_bigquery2.png)
+![airflow](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/airflow.png)
+![Metabase](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/metabase.png)
 
 
-## Steps
 
-TODOS: Containerize all
+## 📊 Pipeline Architecture
+
+```mermaid
+graph TD
+    A[Kaggle Data] --> B(Airflow DAG)
+    B --> C[GCS Bucket]
+    C --> D[BigQuery]
+    D --> E[dbt Models]
+    E --> F[Metabase Dashboard]
+```
+## 🔧 Troubleshooting
+
+    Airflow DAG errors: Verify GOOGLE_APPLICATION_CREDENTIALS are set
+
+    BigQuery permissions: Ensure service account has proper roles
+
+    Kaggle API: Check ~/.kaggle/kaggle.json exists
+
+## 📅 Future Improvements
+
+    Add real-time data streaming
+
+    Implement ML forecasting models
+
+    Optimize pipeline scheduling
+
+
+## all steps I took
 
 1. Create the repository (Git):
     - `git init`
@@ -39,7 +124,7 @@ TODOS: Containerize all
         - adter adding the bigquery as resource, terraform plan, apply and check that it appears in GCP
         
 4. Data Ingestion and Orchestration (Airflow/Prefect): Now we want to create a workflow (direct acyclic graph (DAG)) to ingest data (APIs, databases), upload to a data lake (GCS, S3) and load the data into the warehouse (Bigquery, Redshift). It is important to automate data ingestion and loading, reliability and scalability.
-    - export AIRFLOW_HOME=~/work/Berlin-Weather-Project  NOTE: there has to be a way to add this which is not in the bashrc
+    - export AIRFLOW_HOME=~/work/Berlin-Weather-Project  NOTE: add this to bashrc
     - `pip install apache-airflow` -> add also to requirements
     - `airflow db init`
     - `airflow users create --username admin --firstname Ibai --lastname Irastorza --role Admin --email batxes@gmail.com`
@@ -59,12 +144,16 @@ TODOS: Containerize all
     - to check the name of the datasets: ╰─❯ kaggle datasets list -s berlin                                                                                
     - Note: if the dag fails because of GCP credentials, this worked: export GOOGLE_APPLICATION_CREDENTIALS="/home/ibai/work/Berlin-Weather-Project/keys/berlin-weather-project-25fec91b5442.json"
     - Note: Maybe we need to specify these exports beforehand
+    - Note2: ẁhen running the dags, it says kaggle can not be imported. I added a dockerfile which install kaggle, and added "build ." command to 
     - Added 2 more dags, to create a table and to load into bigquery
     - I need to install this also: pip install apache-airflow-providers-google  -> add to requirements.txt   
     - I added the OS.environ GCS credentials to the beginning of the code, because each task needs them
 
-
-    - Meanwhile, I thought of creating a docker-compose with airflow so I can run it and forget about all steps in point 4. I downloaded the docker compose code from the official website. I added some variables so it can read my environment variables. Added also kaggle to requirements.
+    - Final step: I created a docker-compose with airflow so I can run it and forget about all steps in point 4. I downloaded the docker compose code from the official website. I added some variables so it can read my environment variables. Added also kaggle to requirements.
+    - username and pass: airflow, airflow
+    - Notes: if airlfow says to upgrade database:
+        - docker-compose run --rm airflow-cli bash
+        - 
 
 5. Data transformation (dbt)
     - First install dbt-bigquery
@@ -77,8 +166,12 @@ TODOS: Containerize all
 
     At this point, we should have in ~/.dbt/profiles.yml and also inside dbt_project the dbt project with the dbt_project yml and the exampple.sql in models. wITH RUN, we get a view in bigquery.
 
-6. Data Visualization Dashboard (google data studio / looker studio)
-    - create a new report
-    - connect to BigQuery dataset
+6. Data Visualization Dashboard (metabase / google looker studio)
+    - For Metabase (offline):
+        - docker run -d -p 3000:3000 --name metabase metabase/metabase
+        - run http://localhost:3000/
+    - For google looker studio (cloud):
+        - create a new report
+        - connect to BigQuery dataset
     
 
