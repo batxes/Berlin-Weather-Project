@@ -61,7 +61,7 @@ Access Metabase at: http://localhost:3000
 ![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/google_bigquery1.png)
 ![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/google_bigquery2.png)
 ![airflow](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/airflow.png)
-![Metabase](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/metabase.png)
+![Metabase](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/metabase_screenshot.png)
 
 
 
