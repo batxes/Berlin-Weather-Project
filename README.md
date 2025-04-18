@@ -57,11 +57,11 @@ Access Metabase at: http://localhost:3000
 
 ## Example images
 
-![GCPbuquet](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/google_bucket.png)
-![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/google_bigquery1.png)
-![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/google_bigquery2.png)
-![airflow](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/airflow.png)
-![Metabase](https://github.com/batxes/Berlin-Weather-Project/blob/pictures/metabase.png)
+![GCPbuquet](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/google_bucket.png)
+![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/google_bigquery1.png)
+![GCPBQ](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/google_bigquery2.png)
+![airflow](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/airflow.png)
+![Metabase](https://github.com/batxes/Berlin-Weather-Project/blob/main/pictures/metabase.png)
 
 
 
